@@ -1,0 +1,27 @@
+img {
+  width: 250px;
+}
+
+.movie__container {
+  overflow: auto;
+}
+
+.item__container {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+
+    > h5 {
+      padding: 2rem;
+      background: #222;
+      opacity: 1;
+      transition: 1s all;
+    }
+  }
+}
+
+.vote__count {
+  position: absolute;
+  right: 16px;
+}

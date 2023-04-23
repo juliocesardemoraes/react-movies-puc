@@ -1,0 +1,46 @@
+.landing__page {
+  min-height: 100vh;
+  background: #1e1e1e;
+}
+
+.radial {
+  background: radial-gradient(
+    41.33% 41.33% at 50% 52.87%,
+    #222327 0%,
+    rgba(34, 35, 39, 0) 100%
+  );
+  min-height: 100vh;
+}
+
+.main__title {
+  color: #fff;
+  font-size: 120px;
+}
+
+.title__container {
+  width: 100%;
+  height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  color: #fff;
+  width: 90%;
+}
+
+main {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.loading__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

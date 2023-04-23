@@ -1,0 +1,22 @@
+.image__big {
+  width: 75%;
+  margin-top: 20vh;
+  object-fit: cover !important;
+}
+
+.movie__info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+}
+
+.grid__3 {
+  width: 100%;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
