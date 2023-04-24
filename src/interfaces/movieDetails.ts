@@ -34,4 +34,5 @@ export interface IMovieDetails {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  length: number;
 }
