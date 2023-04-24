@@ -3,7 +3,7 @@ import styled from "styled-components";
 const VoteColoredTitle = styled.h5`
   position: absolute;
   right: 0;
-  border: ${(props) =>
+  border: ${(props: { voteAverage: number }) =>
     props.voteAverage > 6 ? "1px solid #fff" : "1px solid red"};
   color: "#fff";
   opacity: 0;

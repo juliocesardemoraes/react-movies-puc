@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./styles/button.scss";
 
 export default function Button({ imdbId }: { imdbId: string }) {

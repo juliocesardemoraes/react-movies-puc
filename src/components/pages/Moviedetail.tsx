@@ -10,29 +10,31 @@ import { IMovieDetails } from "../../interfaces/movieDetails";
 export default function Moviedetail() {
   const { movieId } = useParams();
 
-  const movieDetails: IMovieDetails = useFetchMovie(`movie/${movieId}`);
+  const movieDetails: IMovieDetails | any = useFetchMovie(`movie/${movieId}`);
 
   return (
     <div className="landing__page">
       {movieDetails?.length === 0 ? (
         <Loading></Loading>
       ) : (
-        <>
-          <Header></Header>
-          <div className="movie__info">
-            <Image
-              path={movieDetails?.backdrop_path}
-              classes="image__big"
-            ></Image>
-            <h1>{movieDetails?.title}</h1>
-            <div className="grid__3">
-              <h5>Orçamento: {movieDetails?.budget}$</h5>
-              <h5>Quantidade de votos: {movieDetails?.vote_count}</h5>
-              <h5>Media de votos: {movieDetails?.vote_average}</h5>
+        movieDetails && (
+          <>
+            <Header></Header>
+            <div className="movie__info">
+              <Image
+                path={movieDetails?.backdrop_path}
+                classes="image__big"
+              ></Image>
+              <h1>{movieDetails?.title}</h1>
+              <div className="grid__3">
+                <h5>Orçamento: {movieDetails?.budget}$</h5>
+                <h5>Quantidade de votos: {movieDetails?.vote_count}</h5>
+                <h5>Media de votos: {movieDetails?.vote_average}</h5>
+              </div>
+              <Button imdbId={movieDetails?.imdb_id}></Button>
             </div>
-            <Button imdbId={movieDetails?.imdb_id}></Button>
-          </div>
-        </>
+          </>
+        )
       )}
     </div>
   );
